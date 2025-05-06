@@ -16,6 +16,7 @@ signals:
     void bakActionRequested();
     void closeRequested();
     void pictureRequested();
+    void picture02Requested();
     void cxykxxRequested();
 
     void FullscreenRequested();

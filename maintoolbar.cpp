@@ -114,8 +114,8 @@ void MainToolbar::setupActions()
     addAction(pictureAction);
     // 创建一个带下拉菜单的 QToolButton（代替原 QAction）--------------------
     QMenu *dropMenu = new QMenu(this);
-    QAction *pic1 = dropMenu->addAction("流程图 1");
-    QAction *pic2 = dropMenu->addAction("流程图 2");
+    QAction *pic1 = dropMenu->addAction("流程图01");
+    QAction *pic2 = dropMenu->addAction("流程图02");
     QToolButton *dropButton = new QToolButton(this);
     dropButton->setText("流程图");
     //dropButton->setIcon(QIcon(PixmapPicture));
@@ -140,7 +140,7 @@ void MainToolbar::setupActions()
     addAction(GuangzipaiAction);
     addAction(PicassistantAction);
     addAction(TrendAction);
-
+    //TrendAction->setEnabled(false);
     addAction(BarwindowAction);
     addAction(ElechistogramAction);
     addAction(ZoominAction);
@@ -186,7 +186,7 @@ void MainToolbar::setupActions()
         emit pictureRequested();  // 保持一致性
     });
     connect(pic2, &QAction::triggered, this, [=]() {
-        // 可以添加其他槽
+        emit picture02Requested();// 可以添加其他槽
     });
 
     connect(cxykxxAction, &QAction::triggered, this, &MainToolbar::cxykxxRequested);

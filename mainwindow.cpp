@@ -35,7 +35,10 @@ MainWindow::MainWindow(QWidget *parent)
     connect(toolbar, &MainToolbar::tableRequested, this, &MainWindow::SLOTS_table);
     connect(toolbar, &MainToolbar::bakActionRequested, this, &MainWindow::SLOTS_bak);
     connect(toolbar, &MainToolbar::closeRequested, this, &MainWindow::SLOTS_closePic);
+
     connect(toolbar, &MainToolbar::pictureRequested, this, &MainWindow::SLOTS_picture);
+    connect(toolbar, &MainToolbar::picture02Requested, this, &MainWindow::SLOTS_picture02);
+
     connect(toolbar, &MainToolbar::cxykxxRequested, this, &MainWindow::SLOTS_cxykxx);
     connect(toolbar, &MainToolbar::FullscreenRequested, this, &MainWindow::SLOTS_Fullscreen);
 
@@ -74,12 +77,6 @@ MainWindow::MainWindow(QWidget *parent)
     connect(toolbar, &MainToolbar::OperationticketRequested, this, &MainWindow::SLOTS_Operationticket);
 
 
-
-
-
-
-
-
 }
 
 MainWindow::~MainWindow()
@@ -104,6 +101,12 @@ void MainWindow::SLOTS_picture()
 {
     qDebug() << "打开PIC";
 }
+
+void MainWindow::SLOTS_picture02()
+{
+    qDebug() << "打开PIC02";
+}
+
 void MainWindow::SLOTS_cxykxx()
 {
     qDebug() << "查询遥控信息";

@@ -21,6 +21,7 @@ private slots:
     void SLOTS_bak();
     void SLOTS_closePic();
     void SLOTS_picture();
+    void SLOTS_picture02();
     void SLOTS_cxykxx();
 
     void SLOTS_Fullscreen();
