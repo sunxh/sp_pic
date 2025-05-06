@@ -1,0 +1,8 @@
+git add .
+git commit -m "你的更新说明"
+git push
+
+
+git pull
+
+
